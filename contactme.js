@@ -2,7 +2,6 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbwhuHfNQzMZFpXoWFlcEj
 const form = document.forms["haris-contact-form"];
 const btnKirim = document.querySelector(".btn-kirim");
 const btnLoading = document.querySelector(".btn-loading");
-const myAlert = document.querySelector(".my-alert");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,7 +15,7 @@ form.addEventListener("submit", (e) => {
       btnLoading.classList.toggle("d-none");
       btnKirim.classList.toggle("d-none");
       // Tampilkan Alert
-      myAlert.classList.toggle("d-none");
+      Swal.fire("Terima Kasih!", "Pesan anda sudah kami terima", "success");
       // Reset formnya
       form.reset();
       console.log("Success!", response);
